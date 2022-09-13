@@ -18,7 +18,6 @@
 //     // console.log(JSON.stringify(bodies))
 // });
 
-
 // 상수값 정의
 const ServiceKey = 'XXsK%2F1XwVTPaVFfkrpoBQapqSlNiziqMMJJRcS549BH3B2gH1ph4mkRwBJgDbI20uZDnt9SiLbsVlFT5%2FAHCBQ%3D%3D'
 const numOfRows = 10;
