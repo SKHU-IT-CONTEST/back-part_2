@@ -31,5 +31,7 @@
 ### 15. windDir : 풍향코드(0 ~ 8, 소수 첫째자리까지의 실수 형)
 
 ### 16. windSpeed : 풍속(m/s, 소수 첫째자리까지의 실수 형)
+------------
+&nbsp;
 
 ![스크린샷 2022-09-16 오후 10 09 23](https://user-images.githubusercontent.com/72461790/190646844-749d5aa1-cf73-4cc4-b19f-ea8286708aa9.png)
