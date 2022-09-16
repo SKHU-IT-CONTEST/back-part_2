@@ -2,7 +2,7 @@
 
 /* NodeJs 12 샘플 코드 */
 
-
+// 사전에 필요한 패키지
 var request = require('request');
 var convert = require('xml-js');
 var fs = require('fs');

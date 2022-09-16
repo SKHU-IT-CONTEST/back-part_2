@@ -5,7 +5,7 @@
         "header": {
             "resultCode": {
                 "_text": "00"
-            },
+            }, 
             "resultMsg": {
                 "_text": "NORMAL SERVICE"
             }
