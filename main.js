@@ -24,7 +24,7 @@ request.get(url + queryParams, (err, res, body) => {
             var xmlToJson = convert.xml2json(result, {compact: true, spaces: 4});
             console.log(`xml to json => ${xmlToJson}`)
         }
-        fs.writeFileSync('example.json', xmlToJson);
+        fs.writeFileSync('./back-part_2/modified.json', xmlToJson); // 저장되는 데이터는 1시간 간격으로 업데이트 처리됨
     }
 })
 

@@ -1,11 +1,9 @@
-
-
 {
     "response": {
         "header": {
             "resultCode": {
                 "_text": "00"
-            }, 
+            },
             "resultMsg": {
                 "_text": "NORMAL SERVICE"
             }
@@ -42,7 +40,7 @@
                             "_text": "0.0"
                         },
                         "windDir": {
-                            "_text": "8.0"
+                            "_text": "1.0"
                         },
                         "windSpeed": {
                             "_text": "3.0"
@@ -77,10 +75,10 @@
                             "_text": "0.0"
                         },
                         "windDir": {
-                            "_text": "8.0"
+                            "_text": "1.0"
                         },
                         "windSpeed": {
-                            "_text": "3.0"
+                            "_text": "4.0"
                         }
                     },
                     {
@@ -112,7 +110,7 @@
                             "_text": "0.0"
                         },
                         "windDir": {
-                            "_text": "8.0"
+                            "_text": "1.0"
                         },
                         "windSpeed": {
                             "_text": "3.0"
@@ -147,7 +145,7 @@
                             "_text": "0.0"
                         },
                         "windDir": {
-                            "_text": "8.0"
+                            "_text": "1.0"
                         },
                         "windSpeed": {
                             "_text": "3.0"
@@ -182,7 +180,7 @@
                             "_text": "0.0"
                         },
                         "windDir": {
-                            "_text": "8.0"
+                            "_text": "1.0"
                         },
                         "windSpeed": {
                             "_text": "3.0"
@@ -217,7 +215,7 @@
                             "_text": "0.0"
                         },
                         "windDir": {
-                            "_text": "8.0"
+                            "_text": "1.0"
                         },
                         "windSpeed": {
                             "_text": "3.0"
@@ -252,7 +250,7 @@
                             "_text": "0.0"
                         },
                         "windDir": {
-                            "_text": "8.0"
+                            "_text": "1.0"
                         },
                         "windSpeed": {
                             "_text": "3.0"
@@ -287,7 +285,7 @@
                             "_text": "0.0"
                         },
                         "windDir": {
-                            "_text": "8.0"
+                            "_text": "1.0"
                         },
                         "windSpeed": {
                             "_text": "3.0"
@@ -322,7 +320,7 @@
                             "_text": "0.0"
                         },
                         "windDir": {
-                            "_text": "8.0"
+                            "_text": "1.0"
                         },
                         "windSpeed": {
                             "_text": "3.0"
@@ -357,7 +355,7 @@
                             "_text": "0.0"
                         },
                         "windDir": {
-                            "_text": "8.0"
+                            "_text": "1.0"
                         },
                         "windSpeed": {
                             "_text": "3.0"
