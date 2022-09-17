@@ -25,27 +25,7 @@ request.get(url + queryParams, (err, res, body) => {
             console.log(`xml to json => ${xmlToJson}`)
         }
         fs.writeFileSync('./back-part_2/modified.json', xmlToJson); // 저장되는 데이터는 1시간 간격으로 업데이트 처리됨
+        // fs.writeFileSync('/Users/hwangjaehyeon/my-json-server/db.json', xmlToJson); // 개인용 임시서버 활용을 위한 저장용 코드
     }
 })
 
-
-// request({
-//     url: url + queryParams,
-//     method: 'GET'
-// }, function (error, response, body) {
-//     const a = JSON.stringify(response.statusCode);
-//     const b = JSON.stringify(response.headers);
-//     const c = JSON.stringify(body);
-//     console.log('Status', response.statusCode);
-//     console.log('Headers', JSON.stringify(response.headers));
-//     console.log('Reponse received', body);
-//     fs.writeFileSync('example1.json', a + b + c);
-//     // var json = convert.xml2json(body, {compact: true, spaces: 4});
-//     // var data = JSON.parse(json).response.body.items.item;
-//     // var localCode = data['localCode']._text;
-//     // var humi = data['humi']._text;
-//     // var rain = data['rain']._text;
-//     // console.log('localcode: ', localCode);
-//     // console.log('humi: ', humi);
-//     // console.log('rain: ', rain);
-// });
