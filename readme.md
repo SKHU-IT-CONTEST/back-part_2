@@ -20,6 +20,7 @@
 <img width="479" alt="스크린샷 2022-09-17 오후 9 59 46" src="https://user-images.githubusercontent.com/72461790/190858172-1ad4d898-fb36-4002-8fcc-b2d098583eda.png">
 
 ### 10. temp : 	온도(℃, 소수 첫째자리까지의 실수 형)
+<img width="501" alt="스크린샷 2022-09-17 오후 10 00 19" src="https://user-images.githubusercontent.com/72461790/190858207-27fd4f21-63f7-49ab-961b-059becece9fe.png">
 
 ### 11. humi : 상대습도(%, 소수 첫째자리까지의 실수 형)
 
