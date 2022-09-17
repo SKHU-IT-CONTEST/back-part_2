@@ -16,7 +16,7 @@
 
 ### 8. fcsDate : 예보 일시("년월일시분" 순서대로 연속 작성된 형태)
 
-### 9. iconNo : 날씨코드(1~12)
+### 9. iconNo : 날씨코드(1~13)
 <img width="479" alt="스크린샷 2022-09-17 오후 9 59 46" src="https://user-images.githubusercontent.com/72461790/190858172-1ad4d898-fb36-4002-8fcc-b2d098583eda.png">
 
 ### 10. temp : 	온도(℃, 소수 첫째자리까지의 실수 형)
