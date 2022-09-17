@@ -5,7 +5,7 @@
 ### 2. resultMsg : 결과 메세지(--> 일반적으로 NORMAL SERVICE)
 
 ### 3. numOfRows : 한 페이지당 결과 수
-
+ 
 ### 4. pageNo : 페이지 수
 
 ### 5. totalCount : 데이터 총 개수(현재 데이터 기준)
