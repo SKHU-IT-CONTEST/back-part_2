@@ -22,10 +22,9 @@ request.get(url + queryParams, (err, res, body) => {
 
             var result = body
             console.log(`body data => ${result}`)
+            var xmlToJson = convert.xml2json(result, {compact: true, spaces: 4});
 
-            const a = convert.xml2json(result, {compact: true, spaces: 4});
-
-            var selectedData = a.response["body"].items.item[2].localCode._text;
+            var selectedData = xmlTojson.response["body"].items.item[2].localCode._text;
             console.log(selectedData);
 
         }
