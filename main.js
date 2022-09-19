@@ -4,7 +4,9 @@
 // 사전에 필요한 패키지
 var request = require('request');
 var convert = require('xml-js');
+
 var fs = require('fs');
+
 
 var url = 'http://apis.data.go.kr/3160000/guroPointFocInfoSvc/getGuro10PointFocInfoSvc';
 var queryParams = '?' + encodeURIComponent('serviceKey') + '=XXsK%2F1XwVTPaVFfkrpoBQapqSlNiziqMMJJRcS549BH3B2gH1ph4mkRwBJgDbI20uZDnt9SiLbsVlFT5%2FAHCBQ%3D%3D'; /* Service Key*/
@@ -23,13 +25,10 @@ request.get(url + queryParams, (err, res, body) => {
             var result = body
             console.log(`body data => ${result}`)
             var xmlToJson = convert.xml2json(result, {compact: true, spaces: 4});
-
-            var selectedData = xmlTojson.response["body"].items.item[2].localCode._text;
-            console.log(selectedData);
+            console.log(xmlToJson);
 
         }
-        fs.writeFileSync('./back-part_2/modified.json', selectedData); // 저장되는 데이터는 1시간 간격으로 업데이트 처리됨
+        fs.writeFileSync('./back-part_2/modified.json', xmlToJson); // 저장되는 데이터는 1시간 간격으로 업데이트 처리됨
         // fs.writeFileSync('/Users/hwangjaehyeon/my-json-server/db.json', xmlToJson); // 개인용 임시서버 활용을 위한 저장용 코드
     }
 })
-
