@@ -11,7 +11,8 @@ app.use(express.urlencoded({ extended: true}));
 
 // 데이터
 const weatherData = fs.readFileSync('./back-part_2/modified.json', {encoding: 'utf8', flag:'r'});
-
+const weatherLastData = JSON.parse(weatherData.response["body"].items.item[2]);
+console.log(weatherLastData.response["body"].items.item[2]);
 /**
  * 파라미터 변수 뜻
  * req : request 요청
@@ -39,7 +40,7 @@ app.get("/api/weather/", (req, res) => {
 })
 
 /**
- * @path {GET} http://localhost:3000/api/weatherdata/weather?localCode="GURO_F08"
+ * @path {GET} http://localhost:3000/api/weatherdata/weather?_text="GURO_F08"
  * @description Query Params 요청 데이터 값이 있고 반환 값이 있는 GET Method 
  * 
  *  Query Params 방식
@@ -49,12 +50,12 @@ app.get("/api/weather/", (req, res) => {
  */
 app.get("/api/weatherdata/weather", (req, res) => {
 
-    var selectedData = req.query.localCode
+    const localCode = req.query._text;
 
     //filter라는 함수는 자바스크립트에서 배열 함수이다. 필터링을 할때 많이 사용된다 필터링한 데이터를 새로운 배열로 반환한다.
-    const data = weatherData.filter(data => body.items.item["localCode"]._text == "GURO_F08");
+    var localCodeData = weatherData.filter(data => data._text == "GURO_F08");
 
-    res.json({ok: false, weather: selectedData, weather: data})
+    res.json({ok: true, weather: localCodeData})
 })
 
 /**
@@ -180,4 +181,4 @@ app.delete("/weather", (req, res) => {
 })
 
 // http listen port 생성 서버 실행
-app.listen(3000, () => console.log("연결 완료."));
+app.listen(3000, () => console.log("연결 완료(localhost:3000)."));
