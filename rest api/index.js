@@ -26,7 +26,7 @@ const weatherData = fs.readFileSync('./back-part_2/modified.json', {encoding: 'u
  app.get("/", (req, res) => {
 
     // Hello World 데이터만 반환(test)
-    res.send(weatherData);
+    res.send("Hello world!");
 });
 
 /**
