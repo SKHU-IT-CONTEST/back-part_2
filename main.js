@@ -71,6 +71,7 @@
 var request = require('request');
 var convert = require('xml-js');
 var fs = require('fs');
+const { json } = require('express');
 var url = 'http://apis.data.go.kr/3160000/guroPointFocInfoSvc/getGuro10PointFocInfoSvc';
 var queryParams = '?' + encodeURIComponent('serviceKey') + '=XXsK%2F1XwVTPaVFfkrpoBQapqSlNiziqMMJJRcS549BH3B2gH1ph4mkRwBJgDbI20uZDnt9SiLbsVlFT5%2FAHCBQ%3D%3D'; /* Service Key*/
 queryParams += '&' + encodeURIComponent('returnType') + '=' + encodeURIComponent('xml'); /* */
@@ -99,7 +100,7 @@ request.get(url + queryParams, (err, res, body) => {
                     
                 }
             }
-            fs.writeFileSync("./back-part_2/modified.json", a, {compact: true, spaces: 4}); // 저장되는 데이터는 1시간 간격으로 업데이트 처리됨
+            fs.writeFileSync("./back-part_2/modified.json", JSON.stringify(a)); // 저장되는 데이터는 1시간 간격으로 업데이트 처리됨
         }
         
         
