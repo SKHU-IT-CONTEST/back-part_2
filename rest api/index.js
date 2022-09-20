@@ -11,8 +11,8 @@ app.use(express.urlencoded({ extended: true}));
 
 // 데이터
 const weatherData = fs.readFileSync('./back-part_2/modified.json', {encoding: 'utf8', flag:'r'});
-const weatherLastData = JSON.parse(weatherData.response["body"].items.item[2]);
-console.log(weatherLastData.response["body"].items.item[2]);
+
+
 /**
  * 파라미터 변수 뜻
  * req : request 요청
