@@ -30,32 +30,13 @@ const weatherData = fs.readFileSync('./back-part_2/modified.json', {encoding: 'u
 });
 
 /**
- * @path {GET} http://localhost:3000/api/weather/
+ * @path {GET} http://localhost:3000/api/weatherdata/
  * @description 요청 데이터 값이 없고 반환 값이 있는 GET Method
  */
-app.get("/api/weather/", (req, res) => {
+app.get("/api/weatherdata/", (req, res) => {
 
     // 데이터 반환
     res.json({ok: true, weather: weatherData});
-})
-
-/**
- * @path {GET} http://localhost:3000/api/weatherdata/weather?_text="GURO_F08"
- * @description Query Params 요청 데이터 값이 있고 반환 값이 있는 GET Method 
- * 
- *  Query Params 방식
- *  
- * 
- * 
- */
-app.get("/api/weatherdata/weather", (req, res) => {
-
-    const localCode = req.query._text;
-
-    //filter라는 함수는 자바스크립트에서 배열 함수이다. 필터링을 할때 많이 사용된다 필터링한 데이터를 새로운 배열로 반환한다.
-    var localCodeData = weatherData.filter(data => data._text == "GURO_F08");
-
-    res.json({ok: true, weather: localCodeData})
 })
 
 /**
