@@ -12,9 +12,8 @@ const date = new Date();
 
 var year = date.getFullYear();
 var month = ('0' + (date.getMonth() + 1)).replace(-2);
-var hours = date.getHours();
 var days = date.getDate();
-var tmphours = date.getHours();
+var hours = date.getHours();
 let existableHoursarray = new Array();
 
 // 현재의 정확한 시간 데이터를 반환하는 함수
@@ -34,10 +33,10 @@ function convertHours(tmphour) {
 }
 
 // 현재 데이터 + 앞으로의 3시간에 대한 데이터를 추출하기 위한 시간 데이터 배열 정의
-existableHoursarray[0] = year + "" + month + "" + days + "" + convertHours(tmphours) + "" + "00";
-existableHoursarray[1] = year + "" + month + "" + days + "" + convertHours(tmphours + 1) + "" + "00";
-existableHoursarray[2] = year + "" + month + "" + days + "" + convertHours(tmphours + 2) + "" + "00";
-existableHoursarray[3] = year + "" + month + "" + days + "" + convertHours(tmphours + 3) + "" + "00";
+existableHoursarray[0] = year + "" + month + "" + days + "" + convertHours(hours) + "" + "00";
+existableHoursarray[1] = year + "" + month + "" + days + "" + convertHours(hours + 1) + "" + "00";
+existableHoursarray[2] = year + "" + month + "" + days + "" + convertHours(hours + 2) + "" + "00";
+existableHoursarray[3] = year + "" + month + "" + days + "" + convertHours(hours + 3) + "" + "00";
 
 
 for(var i=0; i<existableHoursarray.length; i++) {
