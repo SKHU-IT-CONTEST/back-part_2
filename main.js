@@ -29,14 +29,20 @@ function convertHours(tmphour) {
                 return "02";
         }
     }
-    else return "0" + "" + tmphour;
+    else if (tmphour < 10) return "0" + "" + tmphour;
+    else return tmphour;
 }
+
 // 현재 데이터 + 앞으로의 3시간에 대한 데이터를 추출하기 위한 시간 데이터 배열 정의
 existableHoursarray[0] = year + "" + month + "" + days + "" + convertHours(tmphours) + "" + "00";
 existableHoursarray[1] = year + "" + month + "" + days + "" + convertHours(tmphours + 1) + "" + "00";
 existableHoursarray[2] = year + "" + month + "" + days + "" + convertHours(tmphours + 2) + "" + "00";
 existableHoursarray[3] = year + "" + month + "" + days + "" + convertHours(tmphours + 3) + "" + "00";
 
+
+for(var i=0; i<existableHoursarray.length; i++) {
+    console.log(existableHoursarray[i]);
+}
 var url = 'http://apis.data.go.kr/3160000/guroPointFocInfoSvc/getGuro10PointFocInfoSvc';
 var queryParams = '?' + encodeURIComponent('serviceKey') + '=XXsK%2F1XwVTPaVFfkrpoBQapqSlNiziqMMJJRcS549BH3B2gH1ph4mkRwBJgDbI20uZDnt9SiLbsVlFT5%2FAHCBQ%3D%3D'; /* Service Key*/
 queryParams += '&' + encodeURIComponent('returnType') + '=' + encodeURIComponent('xml'); /* */
