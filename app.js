@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 
 // 데이터
-const weatherData = fs.readFileSync('./back-part_2/modified.json', {encoding: 'utf8', flag:'r'});
+const weatherData = fs.readFileSync("./back-part_2/modified.json", 'utf-8');
 
 
 /**
@@ -36,7 +36,7 @@ const weatherData = fs.readFileSync('./back-part_2/modified.json', {encoding: 'u
 app.get("/api/weatherdata/", (req, res) => {
 
     // 데이터 반환
-    res.json({ok: true, weather: weatherData});
+    res.json({ok: true, weatherData: weatherData});
 })
 
 /**
@@ -163,3 +163,4 @@ app.delete("/weather", (req, res) => {
 
 // http listen port 생성 서버 실행
 app.listen(3000, () => console.log("연결 완료(localhost:3000)."));
+// localhost kill할 경우 : kill -9 $(lsof -ti:3000) 입력하기
