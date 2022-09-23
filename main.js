@@ -59,8 +59,8 @@ request.get(url + queryParams, (err, res, body) => {
                     a += JSON.stringify(tmpData[i]);   
                 }
             }
-            // a = a.substring(0, a.length - 1); // json 구조의 규칙에 맞게끔 마지막 데이터의 ',' 문자 제거 처리
-            a += "} ] }"; // 데이터 추가 전의 '[' 기호에 알맞게 대응되도록 ']' 기호 추가
+            a += "} ] }"; // 데이터 추가 전의 "{ [ {" 기호에 알맞게 대응되도록 "} ] }" 기호 추가
+            
             fs.writeFileSync("./back-part_2/modified.json", a); // 저장되는 데이터는 1시간 간격으로 업데이트 처리됨
         }
     }
