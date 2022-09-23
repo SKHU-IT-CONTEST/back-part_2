@@ -4,26 +4,26 @@
 // 7~12 까지의 데이터 추출 필요함
 
 // 사전에 필요한 패키지
-var request = require('request');
-var convert = require('xml-js');
-var fs = require('fs');
-var moment = require('moment'); 
+let  request = require('request');
+let convert = require('xml-js');
+let fs = require('fs');
+let moment = require('moment');
 
 // 데이터를 추출할 기준값인 날짜 4개를 변수에 저장
-var nowDate = moment().format('YYYYMMDDHH00');
-var oneHoursLaterDate = moment().add(1, 'h').format('YYYYMMDDHH00');
-var twoHoursLaterDate = moment().add(2, 'h').format('YYYYMMDDHH00');
-var threeHoursLaterDate = moment().add(3, 'h').format('YYYYMMDDHH00');
+let nowDate = moment().format('YYYYMMDDHH00');
+let oneHoursLaterDate = moment().add(1, 'h').format('YYYYMMDDHH00');
+let twoHoursLaterDate = moment().add(2, 'h').format('YYYYMMDDHH00');
+let threeHoursLaterDate = moment().add(3, 'h').format('YYYYMMDDHH00');
 
 // 현재 데이터 + 앞으로의 3시간에 대한 데이터를 추출하기 위한 시간 데이터 배열 정의
-var existableHoursarray = [];
+let existableHoursarray = [];
 existableHoursarray[0] = nowDate;
 existableHoursarray[1] = oneHoursLaterDate;
 existableHoursarray[2] = twoHoursLaterDate;
 existableHoursarray[3] = threeHoursLaterDate;
 
-var url = 'http://apis.data.go.kr/3160000/guroPointFocInfoSvc/getGuro10PointFocInfoSvc';
-var queryParams = '?' + encodeURIComponent('serviceKey') + '=XXsK%2F1XwVTPaVFfkrpoBQapqSlNiziqMMJJRcS549BH3B2gH1ph4mkRwBJgDbI20uZDnt9SiLbsVlFT5%2FAHCBQ%3D%3D'; /* Service Key*/
+let url = 'http://apis.data.go.kr/3160000/guroPointFocInfoSvc/getGuro10PointFocInfoSvc';
+let queryParams = '?' + encodeURIComponent('serviceKey') + '=XXsK%2F1XwVTPaVFfkrpoBQapqSlNiziqMMJJRcS549BH3B2gH1ph4mkRwBJgDbI20uZDnt9SiLbsVlFT5%2FAHCBQ%3D%3D'; /* Service Key*/
 queryParams += '&' + encodeURIComponent('returnType') + '=' + encodeURIComponent('xml'); /* */
 queryParams += '&' + encodeURIComponent('numOfRows') + '=' + encodeURIComponent('1000'); /* */
 queryParams += '&' + encodeURIComponent('pageNo') + '=' + encodeURIComponent('1'); /* */
@@ -34,13 +34,12 @@ request.get(url + queryParams, (err, res, body) => {
         console.log(`err => ${err}`)
     }
     else {
-        if (res.statusCode == 200) {
+        if (res.statusCode === 200) {
 
-            var result = body
             // console.log(`body data => ${result}`) // 사전에 전체 데이터를 출력
-            var selectedData = JSON.parse(convert.xml2json(result, { compact: true, spaces: 4 }));
-            var a = "{" +  "\"" + "data" + "\"" + ":" + "[" + "{" + "\"" + "3hoursLater" + "\"" +  ":";
-            var tmpData = selectedData.response.body.items.item;
+            let selectedData = JSON.parse(convert.xml2json(body, { compact: true, spaces: 4 }));
+            let a = "{" +  "\"" + "data" + "\"" + ":" + "[" + "{" + "\"" + "3hoursLater" + "\"" +  ":";
+            let tmpData = selectedData.response.body.items.item;
             for (let i = 0; i < tmpData.length; i++) {
                 if ((tmpData[i]['localCode']._text === "GURO_F08")
                     && (tmpData[i]['fcsDate']._text === existableHoursarray[0])) {
