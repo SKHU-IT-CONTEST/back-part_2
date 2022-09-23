@@ -9,6 +9,7 @@ var convert = require('xml-js');
 var fs = require('fs');
 var moment = require('moment'); 
 
+// 데이터를 추출할 기준값인 날짜 4개를 변수에 저장
 var nowDate = moment().format('YYYYMMDDHH00');
 var oneHoursLaterDate = moment().add(1, 'h').format('YYYYMMDDHH00');
 var twoHoursLaterDate = moment().add(2, 'h').format('YYYYMMDDHH00');
