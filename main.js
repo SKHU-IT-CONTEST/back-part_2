@@ -16,11 +16,11 @@ let twoHoursLaterDate = moment().add(2, 'h').format('YYYYMMDDHH00');
 let threeHoursLaterDate = moment().add(3, 'h').format('YYYYMMDDHH00');
 
 // 현재 데이터 + 앞으로의 3시간에 대한 데이터를 추출하기 위한 시간 데이터 배열 정의
-let existableHoursarray = [];
-existableHoursarray[0] = nowDate;
-existableHoursarray[1] = oneHoursLaterDate;
-existableHoursarray[2] = twoHoursLaterDate;
-existableHoursarray[3] = threeHoursLaterDate;
+let existableHoursArray = [];
+existableHoursArray[0] = nowDate;
+existableHoursArray[1] = oneHoursLaterDate;
+existableHoursArray[2] = twoHoursLaterDate;
+existableHoursArray[3] = threeHoursLaterDate;
 
 let url = 'http://apis.data.go.kr/3160000/guroPointFocInfoSvc/getGuro10PointFocInfoSvc';
 let queryParams = '?' + encodeURIComponent('serviceKey') + '=XXsK%2F1XwVTPaVFfkrpoBQapqSlNiziqMMJJRcS549BH3B2gH1ph4mkRwBJgDbI20uZDnt9SiLbsVlFT5%2FAHCBQ%3D%3D'; /* Service Key*/
@@ -42,20 +42,20 @@ request.get(url + queryParams, (err, res, body) => {
             let tmpData = selectedData.response.body.items.item;
             for (let i = 0; i < tmpData.length; i++) {
                 if ((tmpData[i]['localCode']._text === "GURO_F08")
-                    && (tmpData[i]['fcsDate']._text === existableHoursarray[0])) {
+                    && (tmpData[i]['fcsDate']._text === existableHoursArray[0])) {
                         a +="," + "\"" + "nowWeather" + "\"" +  ":";a += JSON.stringify(tmpData[i]); 
                     } 
                 if((tmpData[i]['localCode']._text === "GURO_F08")
-                && (tmpData[i]['fcsDate']._text === existableHoursarray[1])) {
+                && (tmpData[i]['fcsDate']._text === existableHoursArray[1])) {
                 
                     a += "," + "\"" + "1hoursLater" + "\"" +  ":";a += JSON.stringify(tmpData[i]); // 회대 지역(GURO_F08)의 내용만 추출하여 json 파일에 저장함
                 }
                 if((tmpData[i]['localCode']._text === "GURO_F08")
-                && (tmpData[i]['fcsDate']._text === existableHoursarray[2])) {
+                && (tmpData[i]['fcsDate']._text === existableHoursArray[2])) {
                     a += "," + "\"" + "2hoursLater" + "\"" +  ":"; a += JSON.stringify(tmpData[i]);  
                 }
                 if((tmpData[i]['localCode']._text === "GURO_F08")
-                && (tmpData[i]['fcsDate']._text === existableHoursarray[3])) {
+                && (tmpData[i]['fcsDate']._text === existableHoursArray[3])) {
                     a += JSON.stringify(tmpData[i]);   
                 }
             }
