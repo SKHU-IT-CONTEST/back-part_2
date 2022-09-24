@@ -1,1 +1,146 @@
-{"data":[{"3hoursLater":{"localCode":{"_text":"GURO_F08"},"baseDate":{"_text":"202209201700"},"fcsDate":{"_text":"202209232200"},"iconNo":{"_text":"1"},"temp":{"_text":"13.0"},"humi":{"_text":"85.0"},"rainProb":{"_text":"0.0"},"rain":{"_text":"0.0"},"snow":{"_text":"0.0"},"windDir":{"_text":"8.0"},"windSpeed":{"_text":"2.0"}},"2hoursLater":{"localCode":{"_text":"GURO_F08"},"baseDate":{"_text":"202209201700"},"fcsDate":{"_text":"202209232100"},"iconNo":{"_text":"1"},"temp":{"_text":"13.0"},"humi":{"_text":"80.0"},"rainProb":{"_text":"0.0"},"rain":{"_text":"0.0"},"snow":{"_text":"0.0"},"windDir":{"_text":"1.0"},"windSpeed":{"_text":"1.0"}},"1hoursLater":{"localCode":{"_text":"GURO_F08"},"baseDate":{"_text":"202209201700"},"fcsDate":{"_text":"202209232000"},"iconNo":{"_text":"1"},"temp":{"_text":"14.0"},"humi":{"_text":"80.0"},"rainProb":{"_text":"0.0"},"rain":{"_text":"0.0"},"snow":{"_text":"0.0"},"windDir":{"_text":"8.0"},"windSpeed":{"_text":"1.0"}},"nowWeather":{"localCode":{"_text":"GURO_F08"},"baseDate":{"_text":"202209201700"},"fcsDate":{"_text":"202209231900"},"iconNo":{"_text":"1"},"temp":{"_text":"14.0"},"humi":{"_text":"80.0"},"rainProb":{"_text":"0.0"},"rain":{"_text":"0.0"},"snow":{"_text":"0.0"},"windDir":{"_text":"8.0"},"windSpeed":{"_text":"1.0"}}} ] }
+{
+  "data" : [
+    {
+      "3hoursLater" : {
+        "localCode" : {
+          "_text" : "GURO_F08"
+        },
+        "baseDate" : {
+          "_text" : "202209211700"
+        },
+        "fcsDate" : {
+          "_text" : "202209241400"
+        },
+        "iconNo" : {
+          "_text" : "3"
+        },
+        "temp" : {
+          "_text" : "24.0"
+        },
+        "humi" : {
+          "_text" : "45.0"
+        },
+        "rainProb" : {
+          "_text" : "20.0"
+        },
+        "rain" : {
+          "_text" : "0.0"
+        },
+        "snow" : {
+          "_text" : "0.0"
+        },
+        "windDir" : {
+          "_text" : "8.0"
+        },
+        "windSpeed" : {
+          "_text" : "3.0"
+        }
+      },
+      "2hoursLater" : {
+        "localCode" : {
+          "_text" : "GURO_F08"
+        },
+        "baseDate" : {
+          "_text" : "202209211700"
+        },
+        "fcsDate" : {
+          "_text" : "202209241300"
+        },
+        "iconNo" : {
+          "_text" : "1"
+        },
+        "temp" : {
+          "_text" : "18.0"
+        },
+        "humi" : {
+          "_text" : "70.0"
+        },
+        "rainProb" : {
+          "_text" : "0.0"
+        },
+        "rain" : {
+          "_text" : "0.0"
+        },
+        "snow" : {
+          "_text" : "0.0"
+        },
+        "windDir" : {
+          "_text" : "1.0"
+        },
+        "windSpeed" : {
+          "_text" : "1.0"
+        }
+      },
+      "1hoursLater" : {
+        "localCode" : {
+          "_text" : "GURO_F08"
+        },
+        "baseDate" : {
+          "_text" : "202209211700"
+        },
+        "fcsDate" : {
+          "_text" : "202209241200"
+        },
+        "iconNo" : {
+          "_text" : "1"
+        },
+        "temp" : {
+          "_text" : "19.0"
+        },
+        "humi" : {
+          "_text" : "65.0"
+        },
+        "rainProb" : {
+          "_text" : "0.0"
+        },
+        "rain" : {
+          "_text" : "0.0"
+        },
+        "snow" : {
+          "_text" : "0.0"
+        },
+        "windDir" : {
+          "_text" : "1.0"
+        },
+        "windSpeed" : {
+          "_text" : "1.0"
+        }
+      },
+      "nowWeather" : {
+        "localCode" : {
+          "_text" : "GURO_F08"
+        },
+        "baseDate" : {
+          "_text" : "202209211700"
+        },
+        "fcsDate" : {
+          "_text" : "202209241100"
+        },
+        "iconNo" : {
+          "_text" : "1"
+        },
+        "temp" : {
+          "_text" : "20.0"
+        },
+        "humi" : {
+          "_text" : "65.0"
+        },
+        "rainProb" : {
+          "_text" : "0.0"
+        },
+        "rain" : {
+          "_text" : "0.0"
+        },
+        "snow" : {
+          "_text" : "0.0"
+        },
+        "windDir" : {
+          "_text" : "8.0"
+        },
+        "windSpeed" : {
+          "_text" : "1.0"
+        }
+      }
+    }
+  ]
+}

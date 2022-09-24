@@ -39,7 +39,7 @@ request.get(url + queryParams, (err, res, body) => {
             // console.log(`body data => ${result}`) // 사전에 전체 데이터를 출력
             let selectedData = JSON.parse(convert.xml2json(body, { compact: true, spaces: 4 }));
             let a = "{" +  "\"" + "data" + "\"" + ":" + "[" + "{" + "\"" + "3hoursLater" + "\"" +  ":";
-            let tmpData = selectedData.response.body.items.item;
+            var tmpData = selectedData.response.body.items.item;
             for (let i = 0; i < tmpData.length; i++) {
                 if ((tmpData[i]['localCode']._text === "GURO_F08")
                     && (tmpData[i]['fcsDate']._text === existableHoursArray[0])) {
