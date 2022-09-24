@@ -40,4 +40,4 @@
 
 ## 데이터 저장을 위한 Database를 모델링한 테이블 현황(수정 예정 상태)
 
-![](../../Desktop/스크린샷 2022-09-24 오후 12.53.36.png)
+<img width="599" alt="스크린샷 2022-09-24 오후 12 53 36" src="https://user-images.githubusercontent.com/72461790/192079183-23ed2ebb-ff96-4966-af08-c6bb84e8caac.png">
