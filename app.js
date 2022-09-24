@@ -44,12 +44,13 @@ app.use(express.urlencoded({ extended: true}));
 
 /* --------- 여기서부터는 rest api 테스트 코드 입니다. --------- */
 
+
 router.get('/', function(req, res, next) {
     res.render('index', { title: 'Express' });
 });
 
 router.get('/create', function(req, res) {
-    maria.query('CREATE TABLE DEPARTMENT ('
+    maria.query('CREATE TABLE SaveGoodData ('
         +'DEPART_CODE INT(11) NOT NULL,'
         +'NAME VARCHAR(200) NULL DEFAULT NULL COLLATE utf8mb3_general_ci,'
         +'PRIMARY KEY (DEPART_CODE) USING BTREE)', function(err, rows, fields) {
