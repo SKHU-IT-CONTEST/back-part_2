@@ -1,44 +1,83 @@
 //express 모듈 불러오기
-var webapp = require('./routes/index');
-var db = require('./database/connect/maria');
-var http = require('http');
+var fs = require('fs');
 var express = require("express");
-// mariaDB에 접속하여 데이터 저장할 구조 구축하기
+var router = express();
+var app = fs.readFileSync("./back-part_2/modified.json", "utf-8")
+// var webapp = require('./routes/index');
+// var db = require('./database/connect/maria');
+// var http = require('http');
 
-express = express();
+router.use(express.json());
+router.use(express.urlencoded({ extended: true}));
 
-
-
-
-
-
-
-var app = http.createServer(function(req,res){
-
-    db.query(function(error, result){
-        // 커넥션.query 메소드를 호출해서(첫번째인자는 SQL문을주고, 두번째 인자로 콜백함수를 줌).
-        // 첫번째 인자 쿼리가 실행되고 나서 두번째 콜백함수가 실행됨(에러가발생했으면 임의변수 error에 에러값 할당, 접속결과 성공시 결과값 임의변수 topics에 할당)
-        console.log(result)
-        var html =   // 변수 html에 아래 html 코드를 입력
-            `
-    <!doctype html>
-      <html>
-      <head>
-        <title>nodejs - mysql </title>
-        <meta charset="utf-8">
-      </head>
-      <body>
-        nodejs - mysql
-      </body>
-      </html>
-    `
-
-        res.writeHead(200);  // 응답: 상태 성공(200)
-        res.end(html); // 웹에 띄워줄 내용 (html변수)
-    });
-
+router.get("/", (req, res) => {
+    res.send(app);
+    res.end();
 })
-app.listen(3030, () => console.log("연결완료: 3030"));
+
+router.listen(8080, () => console.log("8080 포트 연결"));
+
+// router.get("/", (req, res) => {
+//     if(!req.body.name) {
+//         return res.status(400).json({
+//             status: 'error',
+//             error: 'req body cannot be empty',
+//         });
+//
+//     }
+//     else {
+//         const e = jebal.updateData().then((req2) => req.json(req2));
+//         res.write(JSON.stringify(e));
+//         res.end();
+//     }
+//
+// });
+// router.get("/api/main", (req, res) => {
+//     if(!req.body.name) {
+//         return res.status(400).json({
+//             status: 'error',
+//             error: 'req body cannot be empty',
+//         });
+//     }
+//
+//     else {
+//         const e = jebal.updateData();
+//
+//         res.write(JSON.stringify(e));
+//         res.end(JSON.stringify(e));
+//     }
+// });
+//
+
+
+
+/* --------- 여기서부터는 db 처리용 테스트 코드 입니다. --------- */
+// app = http.createServer(function(req,res){
+//
+//     db.query(function(error, result){
+//         // 커넥션.query 메소드를 호출해서(첫번째인자는 SQL문을주고, 두번째 인자로 콜백함수를 줌).
+//         // 첫번째 인자 쿼리가 실행되고 나서 두번째 콜백함수가 실행됨(에러가발생했으면 임의변수 error에 에러값 할당, 접속결과 성공시 결과값 임의변수 topics에 할당)
+//         console.log(result)
+//         var html =   // 변수 html에 아래 html 코드를 입력
+//             `
+//     <!doctype html>
+//       <html>
+//       <head>
+//         <title>nodejs - mysql </title>
+//         <meta charset="utf-8">
+//       </head>
+//       <body>
+//         nodejs - mysql
+//       </body>
+//       </html>
+//     `
+//
+//         res.writeHead(200);  // 응답: 상태 성공(200)
+//         res.end(html); // 웹에 띄워줄 내용 (html변수)
+//     });
+//
+// })
+// app.listen(3030, () => console.log("연결완료: 3030"));
 
 /* --------- 여기까지 db 처리용 테스트 코드 입니다. --------- */
 
