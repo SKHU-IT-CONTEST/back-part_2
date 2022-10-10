@@ -10,3 +10,5 @@ data.go.kr weather crawl API by nodejs
 
 
 여기부터 기술 관련 내용 작성해주세요.
+
+![스크린샷 2022-10-10 오후 2 28 45](https://user-images.githubusercontent.com/83647215/194803592-600bd1e0-ecd9-4111-b740-c3f2251b0256.png)
